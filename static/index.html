@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atmosfera</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Biblioteca de ícones meteorológicos -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+
+    <!-- JavaScript do Atmosfera -->
+    <script src="/static/script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>☀️ Atmosfera</h1>
+            <p>O clima ajudando você a planejar seu dia</p>
+        </header>
+
+        <section class="card">
+
+            <h2>Consultar clima</h2>
+
+            <form id="form-clima">
+
+                <label for="cidade">Cidade</label>
+                <input
+                    type="text"
+                    id="cidade"
+                    placeholder="Digite sua cidade"
+                    required
+                >
+
+                <label for="perfil">O que deseja fazer?</label>
+
+                <select id="perfil">
+                    <option value="praia">Ir à praia</option>
+                    <option value="lavar_roupa">Lavar roupa</option>
+                    <option value="esportes">Praticar esportes</option>
+                    <option value="trabalho">Sair para trabalhar</option>
+                </select>
+
+                <button type="submit">Consultar clima</button>
+
+            </form>
+
+            <p id="mensagem" role="status"></p>
+
+        </section>
+
+        <section id="resultado" class="card" hidden>
+
+            <h2 id="local"></h2>
+
+            <h3 id="temperatura"></h3>
+
+            <p id="descricao"></p>
+            <p id="sensacao"></p>
+            <p id="umidade"></p>
+            <p id="vento"></p>
+            <p id="qualidade"></p>
+
+            <h3>Recomendação personalizada</h3>
+            <p id="recomendacao"></p>
+
+            <h3>Previsão dos próximos dias</h3>
+            <div id="previsao"></div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
